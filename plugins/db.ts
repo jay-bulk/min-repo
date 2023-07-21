@@ -7,7 +7,8 @@ declare module 'fastify' {
     db: DBProvider
   }
 }
-export default fp(async (fastify, { db = new DBProvider() }) => {
+// @ts-ignore
+export default fp(async (fastify, { db = new DBProvider({ user: 'test', password: 'test', connectString: 'localhost'}) }) => {
   await db.init()
   fastify.decorateRequest('db', null)
   await fastify.addHook('onRequest', (req: FastifyRequest, reply: FastifyReply, done) => {

@@ -4,6 +4,7 @@ coverage/
 dist/
 env/
 env*
+.env
 *.tfvars
 .idea/
 .DS_STORE

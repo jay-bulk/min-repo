@@ -1,14 +1,14 @@
-import Fastify, {FastifyInstance} from 'fastify'
-import db from "./plugins/db";
-import auth from './plugins/auth'
-export async function app (): Promise<FastifyInstance> {
-  let fastify: FastifyInstance = Fastify({})
-  await fastify.register(db)
-  await fastify.register(auth)
+import { app } from './app'
 
-  return fastify
+async function run (): Promise<void> {
+  const fastify = await app()
+
+  await fastify.listen({
+    host: '0.0.0.0',
+    port: 8080
+  })
 }
 
-
-
-
+run()
+  .then(r => {})
+  .catch(err => console.log(err))
