@@ -1,0 +1,25 @@
+{
+  "name": "min-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jay-bulk/min-repo.git"
+  },
+  "author": "jay-bulk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jay-bulk/min-repo/issues"
+  },
+  "homepage": "https://github.com/jay-bulk/min-repo#readme",
+  "dependencies": {
+    "@databases/pg": "^5.4.1",
+    "fastify": "^4.20.0",
+    "fastify-plugin": "^4.5.1",
+    "typescript": "^5.1.6"
+  }
+}
