@@ -1,13 +1,10 @@
 import {
-  Connection,
-  createPool,
-  initOracleClient,
   Pool,
   PoolAttributes,
-  ExecuteOptions,
-  OUT_FORMAT_OBJECT
 } from 'oracledb'
 import { logger } from '../utils'
+import {sql, Connection} from '@databases/pg'
+
 
 interface envOptions {
   user: string | undefined
